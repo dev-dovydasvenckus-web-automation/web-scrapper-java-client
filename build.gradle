@@ -3,6 +3,7 @@ plugins {
     id 'java-library'
     id 'maven-publish'
     id 'signing'
+    id 'io.github.gradle-nexus.publish-plugin' version '1.1.0'
 }
 
 
@@ -56,8 +57,7 @@ publishing {
 
                 developers {
                     developer {
-                        id = 'dovydasvenckus'
-                        url = 'https://github.com/dovydasvenckus'
+                        id = 'https://github.com/dovydasvenckus'
                         name = 'Dovydas Venckus'
                     }
                 }
@@ -69,16 +69,15 @@ publishing {
             }
         }
     }
+}
 
+nexusPublishing {
     repositories {
-        mavenLocal()
-        maven {
-            name = 'OSSRH'
-            url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2'
-            credentials {
-                username = "$ossrhUsername"
-                password = "$ossrhPassword"
-            }
+        sonatype {
+            nexusUrl = uri('https://s01.oss.sonatype.org/service/local/')
+            snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+            username = "$ossrhUsername"
+            password = "$ossrhPassword"
         }
     }
 }
