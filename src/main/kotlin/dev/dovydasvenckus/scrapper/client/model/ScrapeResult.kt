@@ -1,4 +1,4 @@
-package dev.dovydasvenckus.web.scrapper.client.model
+package dev.dovydasvenckus.scrapper.client.model
 
 data class ScrapeResult(
     val status: ScrapeStatus,

@@ -1,4 +1,4 @@
-package dev.dovydasvenckus.web.scrapper.client.jackson
+package dev.dovydasvenckus.scrapper.client.jackson
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider

@@ -1,9 +1,9 @@
-package dev.dovydasvenckus.web.scrapper.client
+package dev.dovydasvenckus.scrapper.client
 
-import dev.dovydasvenckus.web.scrapper.client.jackson.KotlinObjectMapperProvider
-import dev.dovydasvenckus.web.scrapper.client.model.ScrapeRequest
-import dev.dovydasvenckus.web.scrapper.client.model.ScrapeResult
-import dev.dovydasvenckus.web.scrapper.client.service.ScrapingService
+import dev.dovydasvenckus.scrapper.client.jackson.KotlinObjectMapperProvider
+import dev.dovydasvenckus.scrapper.client.model.ScrapeRequest
+import dev.dovydasvenckus.scrapper.client.model.ScrapeResult
+import dev.dovydasvenckus.scrapper.client.service.ScrapingService
 import javax.ws.rs.client.Client
 import javax.ws.rs.client.ClientBuilder
 

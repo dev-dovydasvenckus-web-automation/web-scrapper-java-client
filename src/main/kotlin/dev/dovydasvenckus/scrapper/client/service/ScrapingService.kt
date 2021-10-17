@@ -1,7 +1,7 @@
-package dev.dovydasvenckus.web.scrapper.client.service
+package dev.dovydasvenckus.scrapper.client.service
 
-import dev.dovydasvenckus.web.scrapper.client.model.ScrapeRequest
-import dev.dovydasvenckus.web.scrapper.client.model.ScrapeResult
+import dev.dovydasvenckus.scrapper.client.model.ScrapeRequest
+import dev.dovydasvenckus.scrapper.client.model.ScrapeResult
 import javax.ws.rs.client.Client
 import javax.ws.rs.client.Entity
 import javax.ws.rs.core.MediaType
