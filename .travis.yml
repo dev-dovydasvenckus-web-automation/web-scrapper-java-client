@@ -3,3 +3,4 @@ jdk:
   - openjdk11
 script:
   ./gradlew --no-daemon build
+  ./gradlew publishMavenPublicationToSonatypeRepository
