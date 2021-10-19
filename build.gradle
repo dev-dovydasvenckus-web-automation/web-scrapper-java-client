@@ -11,6 +11,10 @@ plugins {
 sourceCompatibility = '1.11'
 targetCompatibility = '1.8'
 
+ext {
+    isCIServer = System.getenv().isCIServer
+}
+
 java {
     withJavadocJar()
     withSourcesJar()
@@ -35,6 +39,12 @@ dependencies {
 
 signing {
     sign publishing.publications
+    if (isCIServer) {
+        println("This is CI")
+        def signingKey = System.env.signingKey
+        def signingPassword = System.env.signingPassword
+        useInMemoryPgpKeys(signingKey, signingPassword)
+    }
 }
 
 group = 'io.github.dovydasvenckus'
@@ -77,8 +87,8 @@ nexusPublishing {
         sonatype {
             nexusUrl = uri('https://s01.oss.sonatype.org/service/local/')
             snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-            username = "$ossrhUsername"
-            password = "$ossrhPassword"
+            username = "$System.env.ossrhUsername"
+            password = "$System.env.ossrhPassword"
         }
     }
 }
