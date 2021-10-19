@@ -2,5 +2,5 @@ language: java
 jdk:
   - openjdk11
 script:
-  ./gradlew --no-daemon build
-  ./gradlew publishMavenPublicationToSonatypeRepository
+  - ./gradlew build
+  - ./gradlew publishMavenPublicationToSonatypeRepository
