@@ -1,11 +1,11 @@
 package dev.dovydasvenckus.scrapper.client.jackson
 
-import com.fasterxml.jackson.databind.ObjectMapper
-import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
-import com.fasterxml.jackson.module.kotlin.KotlinModule
 import javax.ws.rs.Produces
 import javax.ws.rs.core.MediaType
 import javax.ws.rs.ext.Provider
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
+import com.fasterxml.jackson.module.kotlin.KotlinModule
 
 @Provider
 @Produces(MediaType.APPLICATION_JSON)

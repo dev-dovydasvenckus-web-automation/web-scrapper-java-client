@@ -1,11 +1,11 @@
 package dev.dovydasvenckus.scrapper.client
 
+import javax.ws.rs.client.Client
+import javax.ws.rs.client.ClientBuilder
 import dev.dovydasvenckus.scrapper.client.jackson.KotlinObjectMapperProvider
 import dev.dovydasvenckus.scrapper.client.model.ScrapeRequest
 import dev.dovydasvenckus.scrapper.client.model.ScrapeResult
 import dev.dovydasvenckus.scrapper.client.service.ScrapingService
-import javax.ws.rs.client.Client
-import javax.ws.rs.client.ClientBuilder
 
 class WebScrapperClient(webScraperApiUrl: String) {
     private val scrapingService: ScrapingService = ScrapingService(webScraperApiUrl)
