@@ -47,7 +47,7 @@ signing {
     }
 }
 
-group = 'io.github.dovydasvenckus'
+group = 'dev.dovydasvenckus'
 version = '0.0.1'
 
 publishing {
@@ -58,7 +58,7 @@ publishing {
             pom {
                 name = 'Web scrapper client'
                 description = 'Client for https://github.com/dovydasvenckus/web-scrapper'
-                url = 'https://github.com/dovydasvenckus/web-scrapper-java-client'
+                url = 'https://github.com/dev-dovydasvenckus-web-automation/web-scrapper-java-client'
                 licenses {
                     license {
                         name = 'MIT'
@@ -70,12 +70,13 @@ publishing {
                     developer {
                         id = 'https://github.com/dovydasvenckus'
                         name = 'Dovydas Venckus'
+                        url = 'https://dovydasvenckus.dev'
                     }
                 }
                 scm {
-                    connection = 'git@github.com:dovydasvenckus/web-scrapper-java-client.git'
-                    developerConnection = 'git@github.com:dovydasvenckus/web-scrapper-java-client.git'
-                    url = 'https://github.com/dovydasvenckus/web-scrapper-java-client'
+                    connection = 'git@github.com:dev-dovydasvenckus-web-automation/web-scrapper-java-client.git'
+                    developerConnection = 'git@github.com:dev-dovydasvenckus-web-automation/web-scrapper-java-client.git'
+                    url = 'https://github.com/dev-dovydasvenckus-web-automation/web-scrapper-java-client'
                 }
             }
         }
