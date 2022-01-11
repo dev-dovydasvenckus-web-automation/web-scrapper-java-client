@@ -10,7 +10,7 @@ sourceCompatibility = '1.11'
 targetCompatibility = '1.11'
 
 ext {
-    isCIServer = System.getenv().isCIServer
+    isCIServer = properties.isCIServer ?: System.getenv().isCIServer
 }
 
 java {
@@ -41,16 +41,13 @@ dependencies {
 
 signing {
     sign publishing.publications
-    if (isCIServer) {
-        println("This is CI")
-        def signingKey = System.env.signingKey
-        def signingPassword = System.env.signingPassword
-        useInMemoryPgpKeys(signingKey, signingPassword)
-    }
+    def signingKey = properties.signingKey ?: System.env.signingKey
+    def signingPassword = properties.signingPassword ?: System.env.signingPassword
+    useInMemoryPgpKeys(signingKey, signingPassword)
 }
 
 group = 'dev.dovydasvenckus'
-version = '0.0.2'
+version = '0.0.3'
 
 publishing {
     publications {
@@ -90,8 +87,8 @@ nexusPublishing {
         sonatype {
             nexusUrl = uri('https://s01.oss.sonatype.org/service/local/')
             snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-            username = "$System.env.ossrhUsername"
-            password = "$System.env.ossrhPassword"
+            username = properties.ossrhUsername ?: System.env.ossrhUsername
+            password = properties.ossrhPassword ?: System.env.ossrhPassword
         }
     }
 }
