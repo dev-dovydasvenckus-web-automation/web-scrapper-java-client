@@ -2,11 +2,10 @@ package dev.dovydasvenckus.scrapper.client.service;
 
 import dev.dovydasvenckus.scrapper.client.model.ScrapeRequest;
 import dev.dovydasvenckus.scrapper.client.model.ScrapeResult;
-
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.Entity;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.Entity;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 public class ScrapingService {
 
