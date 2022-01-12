@@ -1,17 +1,12 @@
 package dev.dovydasvenckus.scrapper.client.model;
 
-import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
-
 import java.util.Objects;
 
 public class ScrapedField {
     private final String name;
     private final String value;
 
-
-    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-    public ScrapedField(@JsonProperty("name") String name, @JsonProperty("value") String value) {
+    public ScrapedField(String name, String value) {
         this.name = name;
         this.value = value;
     }

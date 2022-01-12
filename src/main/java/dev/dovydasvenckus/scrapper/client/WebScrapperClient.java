@@ -3,12 +3,12 @@ package dev.dovydasvenckus.scrapper.client;
 import dev.dovydasvenckus.scrapper.client.model.ScrapeRequest;
 import dev.dovydasvenckus.scrapper.client.model.ScrapeResult;
 import dev.dovydasvenckus.scrapper.client.service.ScrapingService;
-import jakarta.ws.rs.client.Client;
-import jakarta.ws.rs.client.ClientBuilder;
+
+import java.net.http.HttpClient;
 
 public class WebScrapperClient {
     private final ScrapingService scrapingService;
-    private final Client client = ClientBuilder.newBuilder().build();
+    private final HttpClient client = HttpClient.newBuilder().build();
 
     public WebScrapperClient(String webScraperApiUrl) {
         this.scrapingService = new ScrapingService(webScraperApiUrl);
